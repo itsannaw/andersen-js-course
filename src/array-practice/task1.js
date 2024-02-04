@@ -14,3 +14,12 @@
  * console.log(any([0, 0, 1, 0])); -> true
  * console.log(any([0, 0, 0, 0])); -> false
  */
+
+const any = (array, callback) => {
+  if (callback) {
+    return array.some(callback);
+  }
+  return array.some(Boolean);
+};
+
+export default any;
